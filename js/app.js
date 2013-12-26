@@ -1,4 +1,5 @@
-if (localStorage && localStorage.username == undefined) {
+/*
+ * if (localStorage && localStorage.username == undefined) {
 	var username = window.prompt('你是?');
 	localStorage.username = username;
 }
@@ -6,6 +7,7 @@ if (localStorage && localStorage.username == undefined) {
 var user = localStorage.username;
 
 $('#username').text(user +',');
+*/
 
 var fb = new Firebase('https://twbus.firebaseio.com/');
 
