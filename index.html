@@ -8,24 +8,31 @@
 		<link rel="stylesheet" href="css/app.css" type="text/css" media="screen" charset="utf-8">
 	</head>
 	<body>
-	<h1>班车来了, ThoughtWorks Xi'an</h1>
-	<p>
-		早8:30发车,晚6:20发车
-	</p>
-	<h3>途径:</h3>
-	<ul>
-		<li><a href="#1">电视塔地铁站</a></li>
-		<li><a href="#2">伟丰花园</a></li>
-		<li><a href="#3">鑫泰园</a></li>
-		<li><a href="#4">东仪路十字西</a></li>
-		<li><a href="#5">521医院</a></li>
-		<li><a href="#6">电子正街丈八路十字西</a></li>
-		<li><a href="#7">204所</a></li>
-		<li><a href="#8">公路二局</a></li>
-		<li><a href="#9">Office</a></li>
-	</ul>
-	<footer>Thoughtworks Xi'an &copy;2013</footer>
+	<div id="main">
+		<header>
+		<h2 id="header">TWer, 班车来了!</h2>
+		<p id="notice">
+			<span id="username"></span>
+			早<span class='red'>8:30</span>发车,晚<span class='red'>6:20</span>发车
+		</p>
+		</header>
+		<ul id="stations">
+			<li class='station-now'>
+			<a href="#1">电视塔地铁站</a>
+			</li>
+			<li><a href="#2">伟丰花园</a></li>
+			<li><a href="#3">鑫泰园</a></li>
+			<li><a href="#4">东仪路十字西</a></li>
+			<li><a href="#5">521医院</a></li>
+			<li><a href="#6">电子正街丈八路十字西</a></li>
+			<li><a href="#7">204所</a></li>
+			<li><a href="#8">公路二局</a></li>
+			<li><a href="#9">Office</a></li>
+		</ul>
+		<div class='clear'></div>
+	</div>
 	<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>
