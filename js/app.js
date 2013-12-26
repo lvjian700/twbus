@@ -22,21 +22,21 @@ fb.on('value', function(snapshot) {
 		}
 		
 		$('li>.buttons').hide();
-		$('li.station-now').removeClass('station-now')
-				.addClass('station-passed').next()
-				.addClass('station-next').find('.buttons').show();
-		
+		$('li.station-now').removeClass('station-now');
+		$('#' + val.currentNum).removeClass('station-now');
+		$('#' + next).addClass('station-next').find('.buttons').show();
+
 		return;
 	}
 
 	if( type == 'stop' ) {
 		$('li>.buttons').hide();
-		$('li.station-next').removeClass('station-next')
+		$('li.station-now').removeClass('station-now');
+		$('li.station-next').removeClass('station-next');
+		
+		$('#' + val.currentNum).removeClass('station-next')
 				.addClass('station-now').find('.buttons').show();
-		if(val.currentNum > 9) {
-			$('#stations>li').removeClass('station-now').removeClass('station-passed');
-			$('#station>li:first').addClass('station-now');
-		}
+		
 		return;
 	}
 });
@@ -98,7 +98,11 @@ $('button.stop').on('click', function(e) {
 		currentNum: num,
 		currentName: current
 	};
-
+	
+	if ( num == 9) {
+		fb.set({type:'stop', currentNum: 1, currentName: '电视塔地铁站'});
+		return;
+	}
 	fb.set(busEvent);
 });
 
