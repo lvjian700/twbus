@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<title>班车来了 - ThoughtWorks Xi'an</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/app.css" type="text/css" media="screen" charset="utf-8">
+	</head>
+	<body>
+	<div id="main">
+		<header>
+		<h3 id="header">TWer, 班车来了!</h3>
+		<p id="notice">
+			早<span class='red'>8:30</span>发车,晚<span class='red'>6:20</span>发车
+		</p>
+		</header>
+		<ul id="stations">
+		
+		</ul>
+		<div class='clear'></div>
+		<footer>
+		</footer>
+	</div>
+	<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/json2.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/backbone-min.js" type="text/javascript" charset="utf-8"></script>
+    
+	<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+	
+    <script type="text/template" id="station-tmpl">
+        <a href="#1"><%= name %></a>
+		<div class='buttons'>
+			<button class='start'>出发</button>
+			<button class='stop'>到站</button>
+        </div>
+    </script>
+	<script src="js/twbus.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
